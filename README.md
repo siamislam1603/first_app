@@ -13,3 +13,6 @@ A new Flutter project.
 <img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/widgets-1.png">
 <img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/widget-tree.png">
 <img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/widget-2.png">
+
+### Optimize runtime performance
+<img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/runtime-optimization.png">

@@ -8,3 +8,8 @@ A new Flutter project.
 ### How Flutter works
 <img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/compilation-1.png">
 <img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/compilation-2.png">
+
+### Widgets to build UI
+<img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/widgets-1.png">
+<img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/widget-tree.png">
+<img src="https://github.com/siamislam1603/first_app/blob/main/android/assets/tutorials/widget-2.png">

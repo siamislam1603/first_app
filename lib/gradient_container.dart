@@ -1,4 +1,3 @@
-import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
 var gradientStartAlignment = Alignment.topLeft;
@@ -19,8 +18,11 @@ class GradientContainer extends StatelessWidget {
           end: gradientEndAlignment,
         ),
       ),
-      child: const Center(
-        child: StyledTextWidget(text: 'Dynamic Text to custom Text Widget'),
+      child: Center(
+        child: Image.asset(
+          'assets/images/dice-3.png',
+          width: 200,
+        ),
       ),
     );
   }

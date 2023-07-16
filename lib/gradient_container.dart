@@ -1,5 +1,8 @@
+import 'package:first_app/styled_text.dart';
 import 'package:flutter/material.dart';
 
+var gradientStartAlignment=Alignment.topLeft;
+var gradientEndAlignment=Alignment.bottomRight;
 class GradientContainer extends StatelessWidget {
   const GradientContainer({super.key});
   // const GradientContainer({key}): super(key: key);
@@ -7,21 +10,15 @@ class GradientContainer extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: [Colors.deepPurple, Color.fromARGB(255, 143, 58, 183)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
+          colors: const [Colors.deepPurple, Color.fromARGB(255, 143, 58, 183)],
+          begin: gradientStartAlignment,
+          end: gradientEndAlignment,
         ),
       ),
       child: const Center(
-        child: Text(
-          'First App',
-          style: TextStyle(
-            fontSize: 50,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        child: StyledTextWidget(text: 'Dynamic Text to custom Text Widget'),
       ),
     );
   }

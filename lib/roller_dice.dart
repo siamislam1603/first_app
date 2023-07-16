@@ -1,4 +1,8 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
+
+final randomizer = Random(); // declared to use the same reference always rather than creating new instance on every click
 
 class RollerDice extends StatefulWidget {
   const RollerDice({super.key});
@@ -9,10 +13,10 @@ class RollerDice extends StatefulWidget {
 }
 
 class _RollerDiceState extends State<RollerDice> {
-  var activeDiceImg = 'assets/images/dice-3.png';
+  var currentDiceNum = 3;
   void rollDice() {
     setState(() {
-      activeDiceImg = 'assets/images/dice-6.png';
+      currentDiceNum = randomizer.nextInt(6) + 1;
     });
   }
 
@@ -22,7 +26,7 @@ class _RollerDiceState extends State<RollerDice> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(
-          activeDiceImg,
+          'assets/images/dice-$currentDiceNum.png',
           width: 200,
         ),
         const SizedBox(

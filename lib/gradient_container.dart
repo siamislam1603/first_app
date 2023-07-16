@@ -8,6 +8,8 @@ class GradientContainer extends StatelessWidget {
   // const GradientContainer({key}): super(key: key);
   // Inheritance in dart, key must be passed either of the ways given above which is required.
   final List<Color> colors;
+
+  void rollDice() {}
   @override
   Widget build(context) {
     return Container(
@@ -19,11 +21,19 @@ class GradientContainer extends StatelessWidget {
         ),
       ),
       child: Center(
-        child: Image.asset(
-          'assets/images/dice-3.png',
-          width: 200,
-        ),
-      ),
+          child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            'assets/images/dice-3.png',
+            width: 200,
+          ),
+          TextButton(
+            onPressed: rollDice,
+            child: const Text('Roll Dice'),
+          ),
+        ],
+      )),
     );
   }
 }

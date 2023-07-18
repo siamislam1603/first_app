@@ -11,12 +11,15 @@ class StartQuiz extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image.asset(bgImg),
+        Image.asset(
+          bgImg,
+          color: const Color.fromARGB(180, 255, 255, 255),
+        ),
         const MarginTop(80),
         Text(
           startScreenText,
           style: const TextStyle(
-            color: Colors.white,
+            color: Color.fromARGB(180, 255, 255, 255),
             fontSize: 25,
           ),
         ),
@@ -24,7 +27,7 @@ class StartQuiz extends StatelessWidget {
         OutlinedButton.icon(
           onPressed: () {},
           style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
+            foregroundColor: const Color.fromARGB(180, 255, 255, 255),
             padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
             textStyle: const TextStyle(fontSize: 20),
           ),

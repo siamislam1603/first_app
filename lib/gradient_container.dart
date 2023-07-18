@@ -1,28 +1,24 @@
-import 'package:first_app/roller_dice.dart';
+import 'package:first_app/start_quiz.dart';
 import 'package:flutter/material.dart';
 
-var gradientStartAlignment = Alignment.topLeft;
-var gradientEndAlignment = Alignment.bottomRight;
+const gradientBegin = Alignment.topLeft;
+const gradientEnd = Alignment.bottomRight;
 
 class GradientContainer extends StatelessWidget {
-  const GradientContainer({super.key, required this.colors});
-  // const GradientContainer({key}): super(key: key);
-  // Inheritance in dart, key must be passed either of the ways given above which is required.
-  final List<Color> colors;
-
+  const GradientContainer({super.key, required this.gradientColors});
+  final List<Color> gradientColors;
   @override
   Widget build(context) {
     return Container(
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: colors,
-          begin: gradientStartAlignment,
-          end: gradientEndAlignment,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: gradientColors,
+            begin: gradientBegin,
+            end: gradientEnd,
+          ),
         ),
-      ),
-      child: const Center(
-        child: RollerDice(),
-      ),
-    );
+        child: const Center(
+          child: StartQuiz(bgImg:'assets/images/quiz-logo.png'),
+        ));
   }
 }

@@ -18,7 +18,10 @@ class GradientContainer extends StatelessWidget {
           ),
         ),
         child: const Center(
-          child: StartQuiz(bgImg:'assets/images/quiz-logo.png'),
+          child: StartQuiz(
+            bgImg: 'assets/images/quiz-logo.png',
+            startScreenText: 'Learn Flutter the fun way!',
+          ),
         ));
   }
 }

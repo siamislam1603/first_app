@@ -15,25 +15,24 @@ class ScreenSwitcher extends StatefulWidget {
 }
 
 class _ScreenSwitcherState extends State<ScreenSwitcher> {
-  Widget? activeScreen;
-  @override
-  void initState() {
-    activeScreen = StartQuiz(
-      bgImg: 'assets/images/quiz-logo.png',
-      startScreenText: 'Learn Flutter the fun way!',
-      handleSwitchScreen: switchScreen,
-    );
-    super.initState();
-  }
+  String activeScreen = 'home-screen';
 
   void switchScreen() {
     setState(() {
-      activeScreen = const Questions();
+      activeScreen = 'questions-screen';
     });
   }
 
   @override
   Widget build(context) {
+    Widget screenWidget = StartQuiz(
+      bgImg: 'assets/images/quiz-logo.png',
+      startScreenText: 'Learn Flutter the fun way!',
+      handleSwitchScreen: switchScreen,
+    );
+    if (activeScreen == 'questions-screen') {
+      screenWidget = const Questions();
+    }
     return Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -43,7 +42,7 @@ class _ScreenSwitcherState extends State<ScreenSwitcher> {
         ),
       ),
       child: Center(
-        child: activeScreen,
+        child: screenWidget,
       ),
     );
   }

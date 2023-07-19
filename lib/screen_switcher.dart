@@ -34,7 +34,7 @@ class _ScreenSwitcherState extends State<ScreenSwitcher> {
       screenWidget = const Questions();
     }
     return Container(
-      padding: const EdgeInsets.fromLTRB(50, 0, 50, 0),
+      padding: const EdgeInsets.fromLTRB(40, 0, 40, 0),
       decoration: BoxDecoration(
         gradient: LinearGradient(
           colors: widget.gradientColors,

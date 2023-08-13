@@ -1,3 +1,5 @@
+import 'package:first_app/expenses_list.dart';
+import 'package:first_app/models/expense.dart';
 import 'package:flutter/material.dart';
 
 class Expenses extends StatefulWidget {
@@ -9,14 +11,31 @@ class Expenses extends StatefulWidget {
 }
 
 class _ExpensesState extends State<Expenses> {
+  final List<Expense> _registeredExpenses = [
+    Expense(
+      title: 'Flutter Course',
+      amount: 19.69,
+      date: DateTime.now(),
+      category: Category.work,
+    ),
+    Expense(
+      title: 'Cinema',
+      amount: 15.99,
+      date: DateTime.now(),
+      category: Category.leisure,
+    ),
+  ];
   @override
   Widget build(context) {
-    return const Scaffold(
+    return Scaffold(
       body: Column(
         children: [
-          Text('Toolbar'),
-          Text('Charts'),
-          Text('Expenses'),
+          const Text('Toolbar'),
+          const Text('Charts'),
+          // Used as, ListView is a scrollview.
+          Expanded(
+            child: ExpensesList(expenses: _registeredExpenses),
+          ),
         ],
       ),
     );
